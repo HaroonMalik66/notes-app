@@ -1,11 +1,12 @@
 import React from 'react';
-import AppBar from './AppBar'
+import NotesApp from "./NotesApp"
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <AppBar />
+      <NotesApp />
     </div>
   );
 }
