@@ -11,8 +11,8 @@ import useLocalStorageState from './hooks/useLocalStorageState';
 
 function Notesapp() {
     var initialNotes = [
-        { id: uuidv4(), title: "Complete workout", text: "10 pushups, 10 chinups, dumbells and 1 km running.", color: null, },
-        { id: uuidv4(), title: "Home Work", text: "Complete home work for math, science and english.", color: null }
+        { id: uuidv4(), title: "Note Title", text: "Edit this note or add a new note to get started.", color: null, },
+
     ];
     const [notes, setNotes] = useLocalStorageState("notes", initialNotes);
 

@@ -11,7 +11,11 @@ import { Delete, Edit, Save } from '@mui/icons-material';
 
 function NoteCard(props) {
     const colors = [
-        "#4cb2f5", "#fa5d4b", "#d4e054", "#ffed58", "#a8a8a8", "#8fdbe3", "#ff8987", "#cdeef0"
+        "#6FEDD6", "#88BEF5", "#FF9551",
+        "#FF4A4A", "#FFF38C", "#F0E161",
+        "#CFE8A9", "#FF87B2", "#FFE898",
+        "#E2DCC8", "#FFC090", "#00A388",
+        "#3CCF4E", "#809A6F", "#FFE59D"
     ]
     const [isEditing, setIsEditing] = useState(props.note.title === "" ? true : false);
     const [title, updateTitle] = useFormState(props.note.title);
@@ -46,7 +50,8 @@ function NoteCard(props) {
                     },
                     "::-webkit-scrollbar": {
                         width: "0",
-                    }
+                    },
+                    boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"
                 }}
 
                 variant="outlined"
@@ -61,7 +66,7 @@ function NoteCard(props) {
                                 onChange={updateTitle}
                                 label="Title"
                             />
-                            <Divider style={{ marginTop: "1rem" }} />
+                            <Divider style={{ marginTop: "0.6rem", marginBottom: "0.3rem" }} />
                             <TextField
                                 multiline
                                 sx={{ width: "100%" }}
@@ -89,7 +94,7 @@ function NoteCard(props) {
                             <Typography variant="h5" component="div">
                                 {props.note.title}
                             </Typography>
-                            <Divider style={{ marginTop: "1rem" }} />
+                            <Divider style={{ marginTop: "0.6rem", marginBottom: "0.5rem" }} />
                             <Typography variant="body3" >
                                 {props.note.text}
                             </Typography>
